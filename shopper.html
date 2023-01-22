@@ -1,0 +1,976 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <title>shopper</title>
+    <style>
+       /* .bold{
+            font-family: arial;
+            font-weight: bold;
+        }*/
+        #nav{
+            height: 70px;
+            font-size: 15px;
+            font-family: arial;
+            font-weight: bold;
+            border-top: 2px solid blueviolet;
+            background-color: grey;
+            position: sticky;
+            top: 0px;
+            
+            cursor: grab;   
+        }
+        main{
+            font-family: arial;
+            font-weight: bold;
+            cursor: grab;
+            height: 100px;
+            padding-top: 25px ;
+            
+        }
+        #shop{
+            font-size: 30px;
+        }
+        #light{
+            font-size: 30px;
+            font-family: arial;
+            font-weight: bold;
+            color: white;
+            background-color: black;
+            height: 100px;
+            padding: 20px;
+        }
+        #color{
+            color: yellow;
+        }
+        #women{
+            background-image: url(./public/women.jpg);
+            background-size: cover;
+            color: white;
+            font-size: 30px;
+            font-weight: bold;
+            font-family: arial;
+
+        }
+        #topic{
+            height:400px;
+        }
+        #men{
+            background-image: url(./public/men.jpg);
+            background-size: cover;
+            color: white;
+            font-size: 30px;
+            font-weight: bold;
+            font-family: arial;
+            
+            
+        }
+        #kid{
+            background-image: url(./public/kids.jpg);
+            background-size: cover;
+            color: white;
+            font-size: 30px;
+            font-weight: bold;
+            font-family: arial;
+        }
+        .shoping{
+            margin-top: 300px;
+            margin-left: -100px;
+            height: 50px;
+            width: 150px;
+            background-color: white;
+            color: black;
+            font-size: 15px;
+            padding-top: 20px;
+            padding-left: 20px;
+        }
+       
+        
+        #about{
+            height: 120px;
+            border-bottom: 1px solid black;
+        }
+        .bars{
+            margin-top: 10px;
+            font-size: 35px;
+        }
+        #middle{
+            height: 250px;
+        }
+        .new{
+            margin-left: 200px;
+            color: grey;
+            font-size: 25px;
+
+        }
+        .pick{
+            margin-left: 120px;
+            font-weight: bold;
+            font-family: arial;
+            margin-top: 10px;
+        }
+        .appear{
+            margin-top: 20px;
+        
+        }
+        #design{
+            height: 400px;
+            cursor: grab ;
+        }
+        #bags{
+           background-image: url(../public/bag.jpg);
+           background-size: cover;
+           margin-left: 40px;
+         }
+         #shirts{
+            
+            background-color: darkgray;
+            margin-left: 70px;
+            display: grid;
+            grid-template-columns: 3fr 6fr 3fr;
+         }
+         .bag{
+            font-size: 35px;
+            font-weight: bold;
+            font-family: arial;
+            
+         }
+         #bags span{
+          margin-left: 0px;
+          transition: 1s;
+         }
+         #bags:hover span{
+            margin-left: 10px;
+            transition: 1s;
+         }
+            
+
+         
+         .now{
+            font-size: 20px;
+            margin-left: 60px;
+
+         }
+         .col1{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            font-size: 20px;
+            font-weight: bold;
+         }
+         .men-shirt{
+            color: white;
+            font-family: arial;
+         }
+         .discount{
+            border: 2px solid red;
+            border-radius: 100%;
+            color: white;
+            background-color: red;
+         }
+         .save{
+            font-size: 20px;
+            margin-left: 55px;
+            margin-top: 5px;
+         }
+         .off{
+            font-size: 25px;
+            margin-left: 35px;
+            font-weight: bold;
+         }
+         #shirts{
+            transition: 1s;
+         }
+         #shirts:hover span{
+            margin-left: 10px;
+            transition: 1s;
+         }
+         #sweat{
+            background-image: url(../public/sweat.jpg);
+            color: white;
+            font-size: 30px;
+            font-family: arial;
+            font-weight: bold;
+            background-size: cover;
+            margin-left: 40px;
+            
+            transform: translate(0px,0px);
+            transition: 1s;
+            
+         }
+         #sweat:hover span{
+            transition: 1s;
+            margin-left: 10px;
+         }
+         #fashion{
+            display: grid;
+            grid-template-columns: 4fr 8fr;
+            margin-left: 15px;
+            
+           
+            background-color: darkgray;
+            transform: translate(0px,0px);
+            transition: 1s;
+
+         }
+         #fashion:hover span{
+            margin-left: 10px;
+            transition: 1s;
+         }
+         #fashion-row{
+            height: 500px;
+            margin-top: 100px;
+            
+            
+         }
+         .fashion2{
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 140px;
+            font-size: 30px;
+            font-weight: bold;
+            font-family: arial;
+
+         }
+         .nbsp {
+            color: white;
+            font-size: 25px;
+            font-weight: bold;
+            margin-top: 20px;
+
+         }
+         #top-month{
+            height: 200px;
+         }
+         .sellers{
+            font-size: 50px;
+            font-family: arial;
+            font-weight: bold;
+
+         }
+         .catag{
+            font-size: 20px;
+            font-family: arial;
+            font-weight: bold;
+            margin-top: 20px;
+            margin-left: 50px;
+         }
+         .catag span{
+            margin-left: 20px;
+            
+         }
+        
+         a{
+            text-decoration: none;
+            color: black;
+         }
+         a:hover{
+            color: red;
+         }
+         #sale{
+            height: 400px;
+            margin-top: 30px;
+         }
+         .sandel-shoes{
+            color: grey;
+            font-size: 20px;
+         }
+         .sandel-heel{
+            font-size: 25px;
+            font-family: arial;
+         }
+         .rate{
+            font-size: 20px;
+            color: grey;
+         }
+         #more{
+            height: 200px;
+            margin-top: 20px;
+         }
+         .discover:hover {
+            border-bottom: none;
+         }
+         .discover{
+            font-size: 30px;
+            color: grey;
+            font-family: arial;
+            border-bottom: 2px solid black;
+         }
+         #shop-now{
+            height: 510px;
+            margin-top: 20px;
+        
+            
+         }
+         .summer{
+
+            font-size: 30px;
+            font-family: arial;
+            font-weight: bold;
+         }
+         #btn{
+            margin-top: 100px;
+            font-size: 30px;
+
+         }
+         #buyer{
+            font-size: 18px;
+            font-family: arial;
+            margin-left: 60px;
+            color: darkgrey;
+            font-weight: bold;
+         }
+         #buyer-review{
+            font-size: 35px;
+            font-family: arial;
+            font-weight: bold;
+            margin-top: 15px;
+         }
+         #customer{
+            height: 250px;
+         }
+         .sneker{
+           color: darkgray;
+           font-weight: bold;
+         }
+         .top-sneker{
+            font-size: 20px;
+            font-family: arial;
+            margin-top: 5px;
+         }
+         .about-sneker{
+            color: darkgrey;
+            font-weight: bold;
+            font-family: arial;
+         }
+         #shopper-1{
+            height: 200px;
+            /*background-color: gray;*/
+         }
+         .shopper-2{
+            font-size: 40px;
+            font-weight: bold;
+            margin-left: 70px;
+         }
+         .dry{
+            font-weight: bold;
+            color: darkgray;
+            font-size: 20px;
+            margin-top: 20px;
+            
+         }
+         .product-1{
+            background-image: url(../public/product-1);
+            background-size: cover;
+            height: 200px;
+            width: 200px;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            font-size: 20px;
+            color: black;
+            font-weight: bold;
+            opacity:1 ;
+         }
+         .product-1 div {
+            display: none;
+         }
+
+         .product-1:hover{
+            opacity: 0.6;
+            
+            cursor: grab;
+         }
+         .purse{
+            background-image: url(../public/purse.jpg);
+            background-size: cover;
+            height: 200px;
+            width: 200px;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            font-size: 20px;
+            color: black;
+            font-weight: bold;
+            opacity:1 ;
+            margin-left: 10px;
+         }
+         .purse div {
+            display: none;
+         }
+
+         .purse:hover{
+            opacity: 0.6;
+            
+            cursor: grab;
+         }
+         .ladies-watch{
+            background-image: url(../public/ladies\ watch.jpg);
+            background-size: cover;
+            height: 200px;
+            width: 200px;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            font-size: 20px;
+            color: black;
+            font-weight: bold;
+            opacity:1 ;
+            margin-left: 10px;
+         }
+         .ladies-watch div {
+            display: none;
+         }
+
+         .ladies-watch:hover{
+            opacity: 0.6;
+            
+            cursor: grab;
+         }
+         .watch{
+            background-image: url(../public/watch.jpg);
+            background-size: cover;
+            height: 200px;
+            width: 200px;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            font-size: 20px;
+            color: black;
+            font-weight: bold;
+            opacity:1 ;
+            margin-left: 10px;
+         }
+         .watch div {
+            display: none;
+         }
+
+         .watch:hover{
+            opacity: 0.6;
+            
+            cursor: grab;
+         }
+         .blazzer{
+            background-image: url(../public/blazzer.jpg);
+            background-size: cover;
+            height: 200px;
+            width: 200px;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            font-size: 20px;
+            color: black;
+            font-weight: bold;
+            opacity:1 ;
+            margin-left: 10px;
+         }
+         .blazzer div {
+            display: none;
+         }
+
+         .blazzer:hover{
+            opacity: 0.6;
+            
+            cursor: grab;
+         }
+         #images{
+            margin-left: 150px;
+         }
+         .mongo{
+            background-image: url(../public/mango.svg);
+            height: 25px;
+            width: 150px;
+            
+         }
+         .zara{
+            background-image: url(../public/zara.svg);
+            height: 20px;
+            width: 85px;
+            
+         }
+         .addidas{
+            background-image: url(../public/adidas.svg);
+            height: 22px;
+            width: 130px;
+            
+         }
+         .rebook{
+            background-image: url(../public/reebok.svg);
+            height: 20px;
+            width: 130px;
+            
+         }
+         .bershaka{
+            background-image: url(../public/bershka.svg);
+            height: 20px;
+            width: 150px;
+            
+         }
+         #sponsor{
+            height: 100px;
+            
+
+         }
+         .asos{
+            background-image: url(../public/asos.svg);
+            height: 20px;
+            width: 73px;
+            
+         }
+         #bd-sponsor{
+            margin-left: 160px;
+            
+         }
+        
+        
+
+        
+
+         
+
+
+
+         
+        
+
+
+
+
+
+
+
+    
+            
+        
+
+        
+             
+        
+           
+        
+
+    </style>
+</head>
+<body class="container-fluid">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <header class="row d-flex justify-content-evenly mt-2" id="nav">
+      <div class="col-md-6 d-flex justify-content-evenly pd-3 mt-2">
+        <div>
+            <span><i class="bi bi-truck pe-2"></i></span>
+            <span> FREE SHIPPING WORLDWIDE</span>
+            
+        </div>
+        <div>
+            
+
+            <select class="form-select">
+                <option>india</option>
+            </select>
+        </div>
+        <div>
+            <select class="form-select">
+                <option>USD</option>
+            </select>
+        </div>
+        <div>
+            <select class="form-select">
+                <option>ENGLISH</option>
+            </select>
+        </div>
+      </div>
+      <div class="col-md-6 d-flex justify-content-evenly pd-3 mt-2">
+        <div class="bold">SHIPPING</div>
+        <div class="bold">FAQ</div>
+        <div class="bold">CONTACT</div>
+        <div>
+            <span><i class="bi bi-facebook pe-2"></i></span>
+            <span><i class="bi bi-twitter pe-2"></i></span>
+            <span><i class="bi bi-instagram pe-2"></i></span>
+            <span><i class="bi bi-mic-fill"></i></span>
+        </div>
+      </div>
+    </header>
+    <main class="row">
+        <div class="col-md-3 mt-2 pd-4" id="shop">
+            <p>shopper</p>
+        </div>
+        <div class="col-md-6 d-flex justify-content-evenly mt-2 pd-4">
+            <div>home</div>
+            <div>catlog</div>
+            <div>shop</div>
+            <div>pages</div>
+            <div>blogs</div>
+            <div>docs</div>
+        </div>
+        <div class="col-md-3 mt-2 pd-4 justify-content-evenly d-flex">
+            <span><i class="bi bi-person"></i></span>
+            <span><i class="bi bi-search"></i></span>
+            <span><i class="bi bi-heart"></i></span>
+            <div class="cart">
+            <span><i class="bi bi-cart-fill"></i></span>
+            <span class="cart-count">2</span></div>
+        </div>
+
+    </main>
+      <div class="row" id="light">
+        <div class="col-md-12 text-center pd-4 mt-2">
+            <div>
+                <span><i class="bi bi-lightning-charge" id="color"></i></span>
+                <span>happy holidays deal on everydays</span>
+                <span><i class="bi bi-lightning-charge" id="color"></i></span>
+                
+            </div>
+        </div>
+
+      </div>
+    <section>
+      <div class="row " id="topic">
+        <div class="col-md-4 d-flex align-items-center justify-content-center mt-3" id="women">
+            <div>WOMEN</div>
+            <div class="shoping">shop womens<span><i class="bi bi-arrow-bar-right"></i></span></div>
+        </div>
+        <div class="col-md-4 d-flex justify-content-center align-items-center mt-3" id="men">
+            <div>MEN</div>
+            <div class="shoping">shop mens<span><i class="bi bi-arrow-bar-right"></i></span></div>
+        </div>
+        <div class="col-md-4 d-flex justify-content-center align-items-center mt-3" id="kid">
+            <div>kids</div>
+            <div class="shoping">shop kids<span><i class="bi bi-arrow-bar-right"></i></span></div>
+        </div>
+
+      </div>
+      <div class="row" id="about">
+        <div class="col-md-3 d-flex justify-content-evenly mt-2 pt-2">
+            <div class="bars"><i class="bi bi-truck text-danger "></i></div>
+            <div><h4>free shipping</h4>
+                <p>from all orders over 100</p>
+            </div>
+        </div>
+        <div class="col-md-3 d-flex justify-content-evenly mt-2 pt-2">
+            <div class="bars"><i class="bi bi-arrows-move text-danger"></i></div>
+            <div><h4>free return</h4>
+            <p>return within 30days</p>
+            </div>
+        </div>
+        <div class="col-md-3 d-flex justify-content-evenly mt-2 pt-2">
+            <div class="bars"><i class="bi bi-lock text-danger"></i></div>
+            <div><h4>secure shopping</h4>
+            <p>you're in safe hand</p>
+            </div>
+        </div>
+        <div class="col-md-3 d-flex justify-content-evenly mt-2 pt-2">
+            <div class="bars"><i class="bi bi-arrow-right-circle text-danger"></i></div>
+            <span><h4>over 10000 styles</h4>
+            <p>we have everything you need</p>
+        <div>
+        </div>
+      </div>
+      <!--second row,-->
+      <div class="row" id="middle">
+        <div class="col-md-12 d-flex justify-content-center align-items-center mt 3">
+           <div>
+            <div class="new">new collection</div>
+            <div class="pick"><h1>BEST PICKS OF 2022</h1></div>
+            <div class="appear"><p>Appear, dry there darkness they're seas, dry waters thing fly midst. Beast, above fly brought Very green.</p></div>
+           </div>
+        </div>
+      </div>
+      <!--third row apply transform-->
+      <div class="row" id="design">
+        <div class="col-md-4 d-flex justify-content-center align-items-center text-white" id="bags">
+            <div>
+                <div class="bag">bags collection</div>
+                <div class="now"><span>shop now</span>&nbsp;
+                    <span><i class="bi bi-arrow-right-circle"></i></span></div>
+            </div>
+            
+        </div>
+        <div class="col-md-6" id="shirts">
+              <div class="col1">
+                <p >printed men's shirts</p>
+                <p class="men-shirt">shop now&nbsp;<span><i class="bi bi-arrow-right-circle"></i></span></p>
+              
+
+                
+              </div>
+              <div class="col2">
+                <img src="./public/shirt.jpg" width="100%">
+              </div>
+              <div class="col3">
+                <div class="discount">
+                    <p class="save">save</p>
+                    <p class="off">50% off</p>
+                </div>
+                
+              </div>
+        </div>
+      </div>
+      <!--third row -->
+      <div class="row" id="fashion-row">
+        <div class="col-md-7" id="fashion">
+            <div class="women-written">
+               <div class="fashion2"> basic women's dresses</div>
+               <div class="nbsp">shop now<span><i class="bi bi-arrow-right-circle"></i></span></div>
+            </div>
+            <div class="women-fashion">
+                <img src="../public/dress.jpg" width="100%" height="100%">
+            </div>
+        </div>
+        <div class="col-md-4 d-flex justify-content-center align-items-center" id="sweat">
+            <div>
+                <div> SWEATSHIRTS</div>
+                <div>shop now<span><i class="bi bi-arrow-right-circle"></i></span></div>
+            </div>
+        </div>
+      </div>
+      <!--top month seller row-->
+      <div class="row" id="top-month">
+        <div class="col-md-12 d-flex justify-content-center align-items-center">
+            <div>
+                <div class="sellers"> top month sellers</div>
+                <div class="catag"><span><a href="">womens</a></span><span><a href=""> mens</a></span><span><a href="">kids</a></span></div>
+            </div>
+        </div>
+      </div>
+      <!--sale for womens-->
+      <div class="row" id="sale">
+        <div class="col-md-3" id="sandel">
+            <div class="sandel-image">
+                <img src="../public/sandel" width="100%" height="100%">
+            </div>
+            <div class="sandel-shoes">shoes</div>
+            <div class="sandel-heel">Leather mid-heel Sandals</div>
+            <div class="rate">&#8377;500</div>
+        </div>
+        <div class="col-md-3" id="shoes">
+            <div class="sandel-image2">
+                <img src="../public/shoes.jpg" width="100%" height="100%">
+            </div>
+            <div class="sandel-shoes">shoes</div>
+            <div class="sandel-heel">leather-shoes</div>
+            <div class="rate"><del>&#8377;600</del>&nbsp;&#8377;500</div>
+        </div>
+        <div class="col-md-3" id="print-dress">
+            <div class="sandel-image3">
+                <img src="../public/dress.jpg" width="100%" height="100%">
+            </div>
+            <div class="sandel-shoes">shoes</div>
+            <div class="sandel-heel">cotton floral print dress</div>
+            <div class="rate">&#8377;500</div>
+        </div>
+        <div class="col-md-3" id="cotton">
+            <div class="sandel-image4">
+                <img src="../public/cotton.jpg" width="100%" height="100%">
+            </div>
+            <div class="sandel-shoes">shoes</div>
+            <div class="sandel-heel">cropped cotton top</div>
+            <div class="rate">&#8377;800</div>
+        </div>
+        
+      </div>
+      <!--anotherfashion image-->
+      <div class="row" id="sale">
+        <div class="col-md-3" id="sandel">
+            <div class="sandel-image">
+                <img src="../public/shoes2.jpg" width="100%" height="100%">
+            </div>
+            <div class="sandel-shoes">shoes</div>
+            <div class="sandel-heel">new nike shoes</div>
+            <div class="rate">&#8377;5000</div>
+        </div>
+        <div class="col-md-3" id="shoes">
+            <div class="sandel-image2">
+                <img src="../public/cotton.jpg" width="100%" height="100%">
+            </div>
+            <div class="sandel-shoes">shoes</div>
+            <div class="sandel-heel">new women skirt dress</div>
+            <div class="rate"><del>&#8377;600</del>&nbsp;&#8377;500</div>
+        </div>
+        <div class="col-md-3" id="print-dress">
+            <div class="sandel-image3">
+                <img src="../public/cotton2" width="100%" height="100%">
+            </div>
+            <div class="sandel-shoes">dress</div>
+            <div class="sandel-heel">cotton floral print dress</div>
+            <div class="rate">&#8377;500</div>
+        </div>
+        <div class="col-md-3" id="cotton">
+            <div class="sandel-image4">
+                <img src="../public/dress.jpg" width="100%" height="100%">
+            </div>
+            <div class="sandel-shoes">cropped</div>
+            <div class="sandel-heel">cropped cotton top</div>
+            <div class="rate">&#8377;8000</div>
+        </div>
+        
+      </div>
+      <!--discover more-->
+      <div class="row" id="more">
+        <div class="col-md-12 d-flex justify-content-center align-items-center">
+            <div><a class="discover" href="">discover more</a></div>
+        </div>
+      </div>
+      <!--shop now-->
+      <div class="row" id="shop-now">
+        <div class="col-md-5" id="img1">
+           <div> <img src="../public/cotton.jpg" width="100%" height="100%"></div>
+        </div>
+        <div class="col-md-3 d-flex justify-content-center align-items-center" id="img2">
+            <div class="summer">
+                <div>get 50% off on summer collection</div>
+                <button class="btn btn-dark" id="btn">shop now<span><i class="bi bi-arrow-bar-right"></i></span></button>
+            </div>
+        </div>
+        <div class="col-md-4" id="img3">
+            <div><img src="../public/shoes.jpg" width="100%" height="100%"></div>
+        </div>
+      </div>
+      <!--what buyer says-->
+      <div class="row" id="customer">
+        <div class="col-md-11 d-flex justify-content-center align-items-center mt-2">
+            <div>
+                <div class="" id="buyer">WHATS BUYERS SAY</div>
+                <div id="buyer-review"> latest buyers reviews</div>
+            </div>
+        </div>
+      </div>
+      <!--reviews-->
+      <div class="row justify-content-evenly mt-3" id="product-review">
+        <div class="col-md-3 border border-2">
+            <div class="d-flex justify-content-around p-3">
+                <div>
+                    <img src="../public/sandel2.jpg" width="100px" height="100px">
+                </div>
+                <div class="ms-1">
+                    <div class="sneker">shoes</div>
+                    <div class="top-sneker">low top sneker</div>
+                    <div class="sneker-rate mt-1">
+                        <span><i class="bi bi-star-fill text-warning"></i></span>
+                        <span><i class="bi bi-star-fill text-warning"></i></span>
+                        <span><i class="bi bi-star-fill text-warning"></i></span>
+                        <span><i class="bi bi-star-fill text-warning"></i></span>
+                        <span><i class="bi bi-star-fill"></i></span>
+                    </div>
+                </div>
+            </div>
+            <div class="about-sneker">
+                <p>The term 'athletic shoes' is typically used for shoes utilized for jogging or road running and indoor sports such as basketball, but tends to exclude shoes for sports played on grass such as association football and rugby football, which are generally known in North America as </p>
+                <p>ajay pratap singh ,10 jan 2013</p>
+            </div>
+        </div>
+        <div class="col-md-3 border border-2">
+            <div class="d-flex justify-content-around p-3">
+                <div>
+                    <img src="../public/cotton2" width="100px" height="100px">
+                </div>
+                <div class="ms-1">
+                    <div class="sneker">dresses</div>
+                    <div class="top-sneker">cotton printed dress</div>
+                    <div class="sneker-rate mt-1">
+                        <span><i class="bi bi-star-fill text-warning"></i></span>
+                        <span><i class="bi bi-star-fill text-warning"></i></span>
+                        <span><i class="bi bi-star-fill text-warning"></i></span>
+                        <span><i class="bi bi-star-fill "></i></span>
+                        <span><i class="bi bi-star-fill"></i></span>
+                    </div>
+                </div>
+            </div>
+            <div class="about-sneker">
+                <p>As the term implies, t-shirt printing refers to the art or process of, well, printing on a t-shirt. The t-shirt’s artwork, which can be an intricate design, lettering, or image, is applied or printed onto the t-shirt using one of the various printing methods, as mentioned earlier. These printed t-shirts can then be sold commercially</p>
+                <p>ajay pratap singh ,10 jan 2013</p>
+            </div>
+        </div>
+        <div class="col-md-3 border border-2">
+            <div class="d-flex justify-content-around p-3">
+                <div>
+                    <img src="../public/shirt.jpg" width="100px" height="100px">
+                </div>
+                <div class="ms-1">
+                    <div class="sneker">shirt's</div>
+                    <div class="top-sneker">oversizied t'shirts</div>
+                    <div class="sneker-rate mt-1">
+                        <span><i class="bi bi-star-fill text-warning"></i></span>
+                        <span><i class="bi bi-star-fill text-warning"></i></span>
+                        <span><i class="bi bi-star-fill text-warning"></i></span>
+                        <span><i class="bi bi-star-fill text-warning"></i></span>
+                        <span><i class="bi bi-star-fill"></i></span>
+                    </div>
+                </div>
+            </div>
+            <div class="about-sneker">
+                <p> As the term implies, t-shirt printing refers to the art or process of, well, printing on a t-shirt. The t-shirt’s artwork, which can be an intricate design, lettering, or image, is applied or printed onto the t-shirt using one of the various printing methods, as mentioned earlier. These printed t-shirts can then be sold commercially</p>
+                <p>ajay pratap singh ,10 jan 2013</p>
+            </div>
+        </div>
+      </div>
+      <!--shopper last -->
+      <div class="row mt-3 bg-light" id="shopper-1">
+        <div class="col-md-12 d-flex justify-content-center align-items-center">
+            <div>
+                <div class="shopper-2">@shopper</div>
+                <div class="dry">Appear, dry there darkness they're seas, dry waters.</div>
+            </div>         
+        </div>
+      </div>
+      <!--shopper last pics-->
+      <div class="row bg-light">
+        <div class="col-md-12">
+            <div class="d-flex " id="images">
+                <div class="product-1">
+                    <div>
+                        <span><i class="bi bi-heart"></i></span>&nbsp;&nbsp;<span>284</span>&nbsp;&nbsp;<span><i class="bi bi-chat-dots"></i></span>&nbsp;&nbsp;<span>7</span>
+                    </div>
+                </div>
+                <div class="purse">
+                    <div>
+                        <span><i class="bi bi-heart"></i></span>&nbsp;&nbsp;<span>284</span>&nbsp;&nbsp;<span><i class="bi bi-chat-dots"></i></span>&nbsp;&nbsp;<span>7</span>
+                    </div>                                   
+                </div>
+                <div class="watch">
+                    <div>
+                        <span><i class="bi bi-heart"></i></span>&nbsp;&nbsp;<span>284</span>&nbsp;&nbsp;<span><i class="bi bi-chat-dots"></i></span>&nbsp;&nbsp;<span>7</span>
+                    </div>
+                </div>
+                <div class="ladies-watch">
+                    <div>
+                        <span><i class="bi bi-heart"></i></span>&nbsp;&nbsp;<span>284</span>&nbsp;&nbsp;<span><i class="bi bi-chat-dots"></i></span>&nbsp;&nbsp;<span>7</span>
+                    </div>
+                </div>
+                <div class="blazzer">
+                    <div>
+                        <span><i class="bi bi-heart"></i></span>&nbsp;&nbsp;<span>284</span>&nbsp;&nbsp;<span><i class="bi bi-chat-dots"></i></span>&nbsp;&nbsp;<span>7</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+      <!--brand name-->
+      <div class="row bg-light">
+        <div class="col-md-12 " id="sponsor">
+            <div class="d-flex mt-3" id="bd-sponsor">
+                <div class="mongo ms-4"></div>
+                <div class="zara ms-4"></div>
+                <div class="rebook ms-4"></div>
+                <div class="asos ms-4"></div>
+                <div class="addidas ms-4"></div>
+                <div class="bershaka ms-4"></div>
+            </div>
+        </div>
+      </div>
+      
+
+      
+
+    </section>
+    <!--section end-->
+    <!--footer start-->
+    
+    
+</body>
+</html>
